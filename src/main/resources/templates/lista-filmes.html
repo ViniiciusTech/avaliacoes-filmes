@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Filmes</title>
+</head>
+<body>
+    <h1>Filmes Cadastrados</h1>
+    <a th:href="@{/filmes/novo}">Cadastrar Novo Filme</a>
+    <ul>
+        <li th:each="filme : ${filmes}">
+            <a th:href="@{/filmes/{id}(id=${filme.id})}" 
+               th:text="${filme.titulo}">Título do Filme</a>
+        </li>
+    </ul>
+</body>
+</html>

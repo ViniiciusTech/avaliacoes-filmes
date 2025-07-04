@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.cinema.avaliacoes.repository;
 
 import com.cinema.avaliacoes.model.Analise;
@@ -20,7 +16,7 @@ public class AnaliseRepository {
 
     public List<Analise> buscarPorFilmeId(Long filmeId) {
         return analises.stream()
-                       .filter(a -> a.getFilmeId().equals(filmeId))
-                       .collect(Collectors.toList());
+            .filter(a -> a.getFilmeId().equals(filmeId))
+            .collect(Collectors.toList());
     }
 }
